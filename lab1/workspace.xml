@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d82213d-1684-4a3e-b5cf-f9697f632fe7" name="Changes" comment="">
-      <change afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/index.html" afterDir="false" />
-      <change afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/package.json" afterDir="false" />
-      <change afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/script.js" afterDir="false" />
-      <change afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/style.css" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/workspace.xml" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "25.2.1",
     "javascript.nodejs.core.library.typings.version": "25.2.3",
     "javascript.preferred.runtime.type.id": "node",
@@ -83,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1789476246195</updated>
       <workItem from="1789476249900" duration="327000" />
-      <workItem from="1789629089880" duration="25835000" />
+      <workItem from="1789629089880" duration="27108000" />
     </task>
     <servers />
   </component>
