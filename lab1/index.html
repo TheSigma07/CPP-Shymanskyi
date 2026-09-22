@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Верхнє навігаційне меню -->
+<!-- Навігаційне меню -->
 <nav class="navbar">
     <div class="container nav-container">
         <a href="#" class="nav-logo">PaperCraft ✏️</a>
@@ -15,39 +15,39 @@
             <li><a href="#" class="nav-link">Головна</a></li>
             <li><a href="#catalog" id="navCatalogBtn" class="nav-link">Каталог</a></li>
             <li><a href="#features" class="nav-link">Переваги</a></li>
+            <li><a href="#tech-stack" class="nav-link">Стек технологій</a></li>
             <li><a href="#about" class="nav-link">Про нас</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- Шапка: заголовок з назвою та коротким описом -->
+<!-- Шапка сайту -->
 <header class="header">
     <div class="container">
         <h1 class="title">PaperCraft ✏️</h1>
         <p class="description">Сучасний онлайн-магазин канцтоварів для навчання, творчості та офісу.</p>
-        <!-- Кнопка дії -->
         <button id="mainBtn" class="btn">Переглянути каталог</button>
     </div>
 </header>
 
 <main class="container">
-    <!-- Список із 4 функцій/переваг застосунку -->
+    <!-- Секція переваг -->
     <section id="features" class="features">
         <h2>Наші переваги та функції:</h2>
         <ul class="features-list">
-            <li class="feature-card" data-info="У нашому каталозі понад 1000 найменувань зошитів, ручок та альбомів!">
+            <li class="feature-card">
                 <h3>📚 Великий асортимент</h3>
                 <p>Зошити, ручки, маркери, альбоми та художні матеріали від світових брендів.</p>
             </li>
-            <li class="feature-card" data-info="Ви можете швидко шукати товари за ціною, брендом або популярністю.">
+            <li class="feature-card">
                 <h3>🔍 Зручний пошук</h3>
                 <p>Швидке фільтрування товарів за категоріями, ціною та виробником.</p>
             </li>
-            <li class="feature-card" data-info="Доставляємо Новою Поштою та Укрпоштою за 1-2 дні.">
+            <li class="feature-card">
                 <h3>🚚 Швидка доставка</h3>
                 <p>Відправка замовлень у день оформлення по всій Україні.</p>
             </li>
-            <li class="feature-card" data-info="Оплата будь-якою карткою Visa/Mastercard без комісії.">
+            <li class="feature-card">
                 <h3>💳 Безпечна оплата</h3>
                 <p>Підтримка оплати карткою на сайті або при отриманні у відділенні.</p>
             </li>
@@ -55,7 +55,7 @@
     </section>
 
     <!-- Інтерактивний каталог товарів -->
-    <section id="catalog" class="catalog hidden">
+    <section id="catalog" class="catalog">
         <h2>Каталог товарів</h2>
         <div class="products-grid">
             <div class="product-card">
@@ -110,12 +110,70 @@
 
         <!-- Кошик покупця -->
         <div class="cart-summary">
-            <p>Товарів у кошику: <span id="cartCount">0</span> | Загальна сума: <span id="cartTotal">0</span> грн</p>
-            <button id="checkoutBtn" class="checkout-btn" disabled>Оформити замовлення та оплатити 💳</button>
+            <h3>🛒 Ваш кошик</h3>
+            <div id="cartItems" class="cart-items-list">
+                <p class="empty-cart-msg">Кошик порожній</p>
+            </div>
+            <div class="cart-totals">
+                <p>Всього товарів: <span id="cartCount">0</span> | Сума: <span id="cartTotal">0</span> грн</p>
+                <button id="checkoutBtn" class="checkout-btn" disabled>Оформити замовлення та оплатити 💳</button>
+            </div>
+        </div>
+
+    <!-- Секція "Стек технологій" -->
+    <section id="tech-stack" class="tech-stack-section">
+        <h2>🛠️ Стек технологій та їх роль у проєкті</h2>
+        <p class="tech-subtitle">Технології, використані при розробці та деплої даного сайту канцтоварів PaperCraft:</p>
+
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <span class="tech-icon">🌐</span>
+                    <h3>HTML5</h3>
+                </div>
+                <p class="tech-role"><strong>Роль:</strong> Структура вебсторінки</p>
+                <p class="tech-desc">Створення семантичного каркаса сайту PaperCraft: розмітка шапки, навігації, каталогу товарів, кошика покупок та форм.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <span class="tech-icon">🎨</span>
+                    <h3>CSS3</h3>
+                </div>
+                <p class="tech-role"><strong>Роль:</strong> Стилізація та адаптивний дизайн</p>
+                <p class="tech-desc">Оформлення зовнішнього вигляду магазину, сітки товарів (Grid/Flexbox), стилізація кнопок, модальних вікон та мобільна адаптивність.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <span class="tech-icon">⚡</span>
+                    <h3>JavaScript (Vanilla JS)</h3>
+                </div>
+                <p class="tech-role"><strong>Роль:</strong> Логіка та інтерактивність</p>
+                <p class="tech-desc">Реалізація роботи кошика, інтерактивного пошуку, відкриття модального вікна оплати та обробки подій користувача.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <span class="tech-icon">🌿</span>
+                    <h3>Git</h3>
+                </div>
+                <p class="tech-role"><strong>Роль:</strong> Система контролю версій</p>
+                <p class="tech-desc">Відстеження історії змін коду проєкту, фіксація комітів та управління структурою папок.</p>
+            </div>
+
+            <div class="tech-card">
+                <div class="tech-card-header">
+                    <span class="tech-icon">🚀</span>
+                    <h3>GitHub & GitHub Pages</h3>
+                </div>
+                <p class="tech-role"><strong>Роль:</strong> Хостинг та репозиторій</p>
+                <p class="tech-desc">Збереження сирцевого коду в онлайн-репозиторії та публікація працюючого вебсайту в мережі Інтернет.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Інформаційний блок -->
+    <!-- Про наш магазин -->
     <section id="about" class="about-section">
         <h2>Про наш магазин</h2>
         <p>Ми надаємо найкращі канцтовари для школи, університету та офісу за доступними цінами з швидкою доставкою по всій Україні.</p>

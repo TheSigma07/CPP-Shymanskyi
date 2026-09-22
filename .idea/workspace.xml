@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2d82213d-1684-4a3e-b5cf-f9697f632fe7" name="Changes" comment="">
       <change beforePath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/workspace.xml" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/lab1/index.html" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/lab1/index.html" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/lab1/script.js" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/lab1/script.js" afterDir="false" />
+      <change beforePath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/lab1/style.css" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/lab1/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html (1).executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -54,12 +58,16 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cross-platform-lab-1/lab1/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cross-platform-lab-1/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
@@ -79,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1789476246195</updated>
       <workItem from="1789476249900" duration="327000" />
-      <workItem from="1789629089880" duration="30762000" />
+      <workItem from="1789629089880" duration="33100000" />
     </task>
     <servers />
   </component>

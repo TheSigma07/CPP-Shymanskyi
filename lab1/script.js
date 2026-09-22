@@ -1,94 +1,111 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mainBtn = document.getElementById('mainBtn');
-    const navCatalogBtn = document.getElementById('navCatalogBtn');
-    const catalog = document.getElementById('catalog');
-    const featureCards = document.querySelectorAll('.feature-card');
-    const buyButtons = document.querySelectorAll('.buy-btn');
-    const cartCountEl = document.getElementById('cartCount');
-    const cartTotalEl = document.getElementById('cartTotal');
-    const checkoutBtn = document.getElementById('checkoutBtn');
+document.addEventListener("DOMContentLoaded", () => {
+    let cart = []; // Масив обраних товарів
 
-    const paymentModal = document.getElementById('paymentModal');
-    const closeModal = document.getElementById('closeModal');
-    const modalTotal = document.getElementById('modalTotal');
-    const paymentForm = document.getElementById('paymentForm');
+    const cartCountEl = document.getElementById("cartCount");
+    const cartTotalEl = document.getElementById("cartTotal");
+    const cartItemsEl = document.getElementById("cartItems");
+    const checkoutBtn = document.getElementById("checkoutBtn");
+    const mainBtn = document.getElementById("mainBtn");
+    const catalogSection = document.getElementById("catalog");
 
-    let cartCount = 0;
-    let cartTotal = 0;
+    // Обробка натискання кнопок "У кошик"
+    const buyBtns = document.querySelectorAll(".buy-btn");
+    buyBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const card = btn.closest(".product-card");
+            const title = card.querySelector("h3").textContent;
+            const price = parseInt(btn.getAttribute("data-price"));
 
-    const toggleCatalog = () => {
-        catalog.classList.toggle('hidden');
-        if (!catalog.classList.contains('hidden')) {
-            mainBtn.textContent = 'Сховати каталог';
-            catalog.scrollIntoView({ behavior: 'smooth' });
+            addToCart(title, price);
+        });
+    });
+
+    // Додавання товару в масив
+    function addToCart(title, price) {
+        const existingItem = cart.find(item => item.title === title);
+        if (existingItem) {
+            existingItem.quantity += 1;
         } else {
-            mainBtn.textContent = 'Переглянути каталог';
+            cart.push({ title, price, quantity: 1 });
         }
+        updateCartUI();
+    }
+
+    // Видалення товару (або зменшення кількості)
+    window.removeFromCart = function(title) {
+        const itemIndex = cart.findIndex(item => item.title === title);
+        if (itemIndex !== -1) {
+            if (cart[itemIndex].quantity > 1) {
+                cart[itemIndex].quantity -= 1;
+            } else {
+                cart.splice(itemIndex, 1);
+            }
+        }
+        updateCartUI();
     };
 
-    mainBtn.addEventListener('click', toggleCatalog);
+    // Оновлення відображення кошика
+    function updateCartUI() {
+        let totalCount = 0;
+        let totalPrice = 0;
 
-    if (navCatalogBtn) {
-        navCatalogBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (catalog.classList.contains('hidden')) {
-                catalog.classList.remove('hidden');
-                mainBtn.textContent = 'Сховати каталог';
-            }
-            catalog.scrollIntoView({ behavior: 'smooth' });
+        if (cart.length === 0) {
+            cartItemsEl.innerHTML = `<p class="empty-cart-msg">Кошик порожній</p>`;
+            checkoutBtn.disabled = true;
+        } else {
+            cartItemsEl.innerHTML = cart.map(item => {
+                totalCount += item.quantity;
+                totalPrice += item.price * item.quantity;
+                return `
+                    <div class="cart-item">
+                        <span class="cart-item-title">${item.title} (x${item.quantity})</span>
+                        <span class="cart-item-price">${item.price * item.quantity} грн</span>
+                        <button class="remove-btn" onclick="removeFromCart('${item.title}')" title="Видалити">🗑️</button>
+                    </div>
+                `;
+            }).join("");
+            checkoutBtn.disabled = false;
+        }
+
+        cartCountEl.textContent = totalCount;
+        cartTotalEl.textContent = totalPrice;
+    }
+
+    // Плавний скролл до каталогу
+    if (mainBtn && catalogSection) {
+        mainBtn.addEventListener("click", () => {
+            catalogSection.scrollIntoView({ behavior: "smooth" });
         });
     }
 
-    featureCards.forEach(card => {
-        card.addEventListener('click', () => {
-            alert(card.getAttribute('data-info'));
+    // Модальне вікно оплати
+    const modal = document.getElementById("paymentModal");
+    const closeModal = document.getElementById("closeModal");
+    const modalTotal = document.getElementById("modalTotal");
+    const paymentForm = document.getElementById("paymentForm");
+
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener("click", () => {
+            const currentTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            if (modalTotal) modalTotal.textContent = currentTotal;
+            if (modal) modal.classList.remove("hidden");
         });
-    });
+    }
 
-    buyButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const price = parseInt(button.getAttribute('data-price'));
-
-            cartCount++;
-            cartTotal += price;
-
-            cartCountEl.textContent = cartCount;
-            cartTotalEl.textContent = cartTotal;
-
-            checkoutBtn.disabled = false;
-
-            const originalText = button.textContent;
-            button.textContent = 'Додано! ✓';
-            button.style.backgroundColor = '#27ae60';
-
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.style.backgroundColor = '#2b5876';
-            }, 800);
+    if (closeModal) {
+        closeModal.addEventListener("click", () => {
+            if (modal) modal.classList.add("hidden");
         });
-    });
+    }
 
-    checkoutBtn.addEventListener('click', () => {
-        modalTotal.textContent = cartTotal;
-        paymentModal.classList.remove('hidden');
-    });
-
-    closeModal.addEventListener('click', () => {
-        paymentModal.classList.add('hidden');
-    });
-
-    paymentForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        alert(`Оплата успішна! Дякуємо за замовлення на суму ${cartTotal} грн.`);
-
-        cartCount = 0;
-        cartTotal = 0;
-        cartCountEl.textContent = '0';
-        cartTotalEl.textContent = '0';
-        checkoutBtn.disabled = true;
-
-        paymentModal.classList.add('hidden');
-        paymentForm.reset();
-    });
+    if (paymentForm) {
+        paymentForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Дякуємо! Оплата успішно проведена.");
+            cart = [];
+            updateCartUI();
+            if (modal) modal.classList.add("hidden");
+            paymentForm.reset();
+        });
+    }
 });
