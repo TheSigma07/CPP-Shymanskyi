@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d82213d-1684-4a3e-b5cf-f9697f632fe7" name="Changes" comment="" />
+    <list default="true" id="2d82213d-1684-4a3e-b5cf-f9697f632fe7" name="Changes" comment="">
+      <change beforePath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/workspace.xml" beforeDir="false" afterPath="$APPLICATION_HOME_DIR$/cross-platform-lab-1/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1789476246195</updated>
       <workItem from="1789476249900" duration="327000" />
-      <workItem from="1789629089880" duration="29496000" />
+      <workItem from="1789629089880" duration="30762000" />
     </task>
     <servers />
   </component>
