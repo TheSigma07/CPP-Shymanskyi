@@ -1,5 +1,30 @@
-### GET request to example server
-GET https://examples.http-client.intellij.net/get
-    ?generated-in=WebStorm
+### 1. Отримати всі канцтовари
+GET http://localhost:5000/api/stationery
 
-###
+### 2. Отримати канцтовар за ID
+GET http://localhost:5000/api/stationery/6abf85a1acc3c66300fa32e3
+
+### 3. Створити новий канцтовар
+POST http://localhost:5000/api/stationery
+Content-Type: application/json
+
+{
+  "name": "Блокнот PaperCraft A5",
+  "category": "Блокноти",
+  "price": 120,
+  "inStock": true
+}
+
+### 4. Оновити канцтовар
+PUT http://localhost:5000/api/stationery/6abf85a1acc3c66300fa32e3
+Content-Type: application/json
+
+{
+  "name": "Блокнот PaperCraft A5 (Преміум)",
+  "category": "Блокноти",
+  "price": 150,
+  "inStock": true
+}
+
+### 5. Видалити канцтовар
+DELETE http://localhost:5000/api/stationery/6abf85a1acc3c66300fa32e3

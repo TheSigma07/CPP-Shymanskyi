@@ -1,19 +1,19 @@
 import { Router } from "express";
 import {
-    getNotes,
-    getNoteById,
-    createNote,
-    updateNote,
-    deleteNote,
-} from "../controllers/noteController.js";
-import { validateNote } from "../middleware/validateNote.js";
+    getStationery,
+    getStationeryById,
+    createStationery,
+    updateStationery,
+    deleteStationery,
+} from "../controllers/stationeryController.js";
+import { validateStationery } from "../middleware/validateStationery.js";
 
 const router = Router();
 
-router.get("/", getNotes);
-router.get("/:id", getNoteById);
-router.post("/", validateNote, createNote);
-router.put("/:id", validateNote, updateNote);
-router.delete("/:id", deleteNote);
+router.get("/", getStationery);
+router.get("/:id", getStationeryById);
+router.post("/", validateStationery, createStationery);
+router.put("/:id", validateStationery, updateStationery);
+router.delete("/:id", deleteStationery);
 
 export default router;

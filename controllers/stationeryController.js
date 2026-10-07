@@ -1,67 +1,67 @@
-import Note from "../models/Note.js";
+import Stationery from "../models/Stationery.js";
 
-export async function getNotes(req, res) {
+export async function getStationery(req, res) {
     try {
-        const notes = await Note.find().sort({ createdAt: -1 });
-        res.json(notes);
+        const items = await Stationery.find().sort({ createdAt: -1 });
+        res.json(items);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 }
 
-export async function getNoteById(req, res) {
+export async function getStationeryById(req, res) {
     try {
-        const note = await Note.findById(req.params.id);
+        const item = await Stationery.findById(req.params.id);
 
-        if (!note) {
-            return res.status(404).json({ message: "Нотатку не знайдено" });
+        if (!item) {
+            return res.status(404).json({ message: "Канцтовар не знайдено" });
         }
 
-        res.json(note);
+        res.json(item);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 }
 
-export async function createNote(req, res) {
+export async function createStationery(req, res) {
     try {
-        const { title, content } = req.body;
-        const note = await Note.create({ title, content });
-        res.status(201).json(note);
+        const { name, category, price, inStock } = req.body;
+        const item = await Stationery.create({ name, category, price, inStock });
+        res.status(201).json(item);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 }
 
-export async function updateNote(req, res) {
+export async function updateStationery(req, res) {
     try {
-        const { title, content } = req.body;
-        const note = await Note.findByIdAndUpdate(
+        const { name, category, price, inStock } = req.body;
+        const item = await Stationery.findByIdAndUpdate(
             req.params.id,
-            { title, content },
+            { name, category, price, inStock },
             { new: true, runValidators: true }
         );
 
-        if (!note) {
-            return res.status(404).json({ message: "Нотатку не знайдено" });
+        if (!item) {
+            return res.status(404).json({ message: "Канцтовар не знайдено" });
         }
 
-        res.json(note);
+        res.json(item);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 }
 
-export async function deleteNote(req, res) {
+export async function deleteStationery(req, res) {
     try {
-        const note = await Note.findByIdAndDelete(req.params.id);
+        const item = await Stationery.findByIdAndDelete(req.params.id);
 
-        if (!note) {
-            return res.status(404).json({ message: "Нотатку не знайдено" });
+        if (!item) {
+            return res.status(404).json({message: "Канцтовар не знайдено"});
         }
 
-        res.json({ message: "Нотатку видалено" });
+        res.json({message: "Канцтовар успішно видалено"});
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({message: error.message});
     }
 }
