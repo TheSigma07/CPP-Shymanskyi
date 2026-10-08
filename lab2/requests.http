@@ -2,29 +2,36 @@
 GET http://localhost:5000/api/stationery
 
 ### 2. Отримати канцтовар за ID
-GET http://localhost:5000/api/stationery/6abf85a1acc3c66300fa32e3
+GET http://localhost:5000/api/stationery/6ac7466e58cc2280d01d31f5
 
 ### 3. Створити новий канцтовар
 POST http://localhost:5000/api/stationery
 Content-Type: application/json
 
 {
-  "name": "Блокнот PaperCraft A5",
+  "_id": "6ac746ae58cc2280d01d31f9",
+  "name": "Щоденник датований",
   "category": "Блокноти",
-  "price": 120,
-  "inStock": true
+  "price": 210,
+  "inStock": true,
+  "createdAt": "2026-10-08T07:30:54.112Z",
+  "updatedAt": "2026-10-08T07:30:54.112Z",
+  "__v": 0
 }
 
 ### 4. Оновити канцтовар
-PUT http://localhost:5000/api/stationery/6abf85a1acc3c66300fa32e3
+PUT http://localhost:5000/api/stationery/6ac746a258cc2280d01d31f7
 Content-Type: application/json
 
 {
-  "name": "Блокнот PaperCraft A5 (Преміум)",
-  "category": "Блокноти",
-  "price": 150,
+  "name": "Альбом для малювання",
+  "category": "Альбоми",
+  "price": 75,
   "inStock": true
 }
 
+
 ### 5. Видалити канцтовар
-DELETE http://localhost:5000/api/stationery/6abf85a1acc3c66300fa32e3
+DELETE http://localhost:5000/api/stationery/6ac746d658cc2280d01d31fc
+
+

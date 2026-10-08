@@ -9,6 +9,16 @@ export async function getStationery(req, res) {
     }
 }
 
+// Отримувати лише ті товари, які є в наявності
+exports.getAllStationery = async (req, res) => {
+    try {
+        const products = await Stationery.find({ inStock: true });
+        res.status(200).json(products);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
 export async function getStationeryById(req, res) {
     try {
         const item = await Stationery.findById(req.params.id);
