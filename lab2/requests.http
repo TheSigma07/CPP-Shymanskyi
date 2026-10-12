@@ -32,6 +32,6 @@ Content-Type: application/json
 
 
 ### 5. Видалити канцтовар
-DELETE http://localhost:5000/api/stationery/6ac746d658cc2280d01d31fc
+DELETE http://localhost:5000/api/stationery/6acd48398cc674c034fc4e16
 
 

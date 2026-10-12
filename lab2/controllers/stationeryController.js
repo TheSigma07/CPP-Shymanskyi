@@ -10,7 +10,7 @@ export async function getStationery(req, res) {
 }
 
 // Отримувати лише ті товари, які є в наявності
-exports.getAllStationery = async (req, res) => {
+export const getAllStationery = async (req, res) => {
     try {
         const products = await Stationery.find({ inStock: true });
         res.status(200).json(products);
@@ -19,7 +19,8 @@ exports.getAllStationery = async (req, res) => {
     }
 };
 
-export async function getStationeryById(req, res) {
+// Отримати канцтовар за ID
+export const getStationeryById = async (req, res) => {
     try {
         const item = await Stationery.findById(req.params.id);
 
@@ -31,17 +32,18 @@ export async function getStationeryById(req, res) {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
+};
 
-export async function createStationery(req, res) {
+// Створити новий канцтовар
+export const createStationery = async (req, res) => {
     try {
         const { name, category, price, inStock } = req.body;
         const item = await Stationery.create({ name, category, price, inStock });
         res.status(201).json(item);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
-}
+};
 
 export async function updateStationery(req, res) {
     try {

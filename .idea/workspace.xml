@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d82213d-1684-4a3e-b5cf-f9697f632fe7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/controllers/stationeryController.js" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/controllers/stationeryController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/lab2/requests.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HttpClientOnboardingState"><![CDATA[{
+  "isOnboardingCommentShown": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6,
   &quot;fromUser&quot;: false
@@ -33,40 +37,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.index.html (1).executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;25.2.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;25.2.3&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "HTTP Request.requests | 1. Отримати всі канцтовари.executor": "Run",
+    "HTTP Request.requests | 2. Отримати канцтовар за ID.executor": "Run",
+    "HTTP Request.requests | 3. Створити новий канцтовар.executor": "Run",
+    "HTTP Request.requests | 4. Оновити канцтовар.executor": "Run",
+    "HTTP Request.requests | 5. Видалити канцтовар.executor": "Run",
+    "JavaScript Debug.index.html (1).executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "25.2.1",
+    "javascript.nodejs.core.library.typings.version": "25.2.3",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/Users/admin/WebstormProjects/cross-platform-lab2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\admin\\AppData\\Roaming\\npm\\node_modules\\typescript\\lib"
   }
-}</component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
-    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cross-platform-lab-1/lab1/index.html" useBuiltInWebServerPort="true">
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="HttpClient.HttpRequestRunConfigurationType">
+          <value>
+            <map>
+              <entry key="requests | 1. Отримати всі канцтовари" value="STOPPED" />
+              <entry key="requests | 2. Отримати канцтовар за ID" value="STOPPED" />
+              <entry key="requests | 3. Створити новий канцтовар" value="STOPPED" />
+              <entry key="requests | 4. Оновити канцтовар" value="STOPPED" />
+              <entry key="requests | 5. Видалити канцтовар" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.requests | 1. Отримати всі канцтовари">
+    <configuration name="requests | 1. Отримати всі канцтовари" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab2/requests.http" executionIdentifier="1. Отримати всі канцтовари" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cross-platform-lab-1/index.html" useBuiltInWebServerPort="true">
+    <configuration name="requests | 2. Отримати канцтовар за ID" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab2/requests.http" executionIdentifier="2. Отримати канцтовар за ID" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests | 3. Створити новий канцтовар" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab2/requests.http" executionIdentifier="3. Створити новий канцтовар" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests | 4. Оновити канцтовар" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab2/requests.http" executionIdentifier="4. Оновити канцтовар" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="requests | 5. Видалити канцтовар" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab2/requests.http" executionIdentifier="5. Видалити канцтовар" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="HTTP Request.requests | 1. Отримати всі канцтовари" />
+        <item itemvalue="HTTP Request.requests | 5. Видалити канцтовар" />
+        <item itemvalue="HTTP Request.requests | 4. Оновити канцтовар" />
+        <item itemvalue="HTTP Request.requests | 3. Створити новий канцтовар" />
+        <item itemvalue="HTTP Request.requests | 2. Отримати канцтовар за ID" />
       </list>
     </recent_temporary>
   </component>
@@ -86,6 +127,7 @@
       <updated>1789476246195</updated>
       <workItem from="1789476249900" duration="327000" />
       <workItem from="1789629089880" duration="33100000" />
+      <workItem from="1791831012549" duration="5450000" />
     </task>
     <servers />
   </component>
