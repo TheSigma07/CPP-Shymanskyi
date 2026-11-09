@@ -1,0 +1,12 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "PaperCraft Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^28.3.3"
+  }
+}
