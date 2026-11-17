@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>PaperCraft Web (Monorepo)</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "@papercraft/core": "/node_modules/@papercraft/core/index.js"
+          }
+        }
+    </script>
+</head>
+<body>
+<header class="header">
+    <h1>PaperCraft ✏️</h1>
+    <p>Онлайн-каталог канцтоварів (Web-версія)</p>
+</header>
+
+<main class="container">
+    <section class="card">
+        <h2>Додати канцтовар</h2>
+        <div class="form-row">
+            <input type="text" id="titleInput" placeholder="Назва товару...">
+            <input type="number" id="priceInput" placeholder="Ціна (грн)">
+            <button id="addBtn" class="btn btn-primary">Додати</button>
+        </div>
+        <div id="errorMsg" class="error-text"></div>
+    </section>
+
+    <section class="card">
+        <h2>Пошук у каталозі</h2>
+        <input type="text" id="searchInput" placeholder="Введіть назву для пошуку...">
+    </section>
+
+    <section class="card">
+        <h2>Каталог товарів</h2>
+        <div id="itemsList" class="items-list"></div>
+    </section>
+</main>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

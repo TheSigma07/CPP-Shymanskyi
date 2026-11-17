@@ -1,0 +1,14 @@
+{
+  "name": "lab7",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Монорепозиторій PaperCraft: спільне ядро та клієнти (веб, десктоп)",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm test --workspaces --if-present",
+    "start:web": "npm start -w papercraft-web",
+    "start:desktop": "npm start -w papercraft-monorepo-desktop"
+  }
+}

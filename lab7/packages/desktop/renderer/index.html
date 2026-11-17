@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <title>PaperCraft Desktop (Monorepo)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <h1>PaperCraft Desktop ✏️</h1>
+    <p>Десктопний клієнт зі спільним ядром @papercraft/core</p>
+</header>
+
+<main class="container">
+    <section class="card">
+        <h2>Додати канцтовар</h2>
+        <div class="form-row">
+            <input type="text" id="titleInput" placeholder="Назва товару...">
+            <input type="number" id="priceInput" placeholder="Ціна (грн)">
+            <button id="addBtn" class="btn btn-primary">Додати</button>
+        </div>
+        <div id="errorMsg" class="error-text"></div>
+    </section>
+
+    <section class="card">
+        <h2>Пошук у каталозі</h2>
+        <input type="text" id="searchInput" placeholder="Введіть назву для пошуку...">
+    </section>
+
+    <section class="card">
+        <h2>Каталог товарів</h2>
+        <div id="itemsList" class="items-list"></div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

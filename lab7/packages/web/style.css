@@ -1,0 +1,14 @@
+body { font-family: system-ui, sans-serif; background: #f4f6f9; margin: 0; color: #1e293b; }
+.header { background: #1e293b; color: white; text-align: center; padding: 24px; }
+.container { max-width: 800px; margin: 24px auto; padding: 0 16px; }
+.card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.form-row { display: flex; gap: 10px; }
+input { padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; flex: 1; font-size: 15px; }
+.btn { padding: 10px 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.btn-primary { background: #2563eb; color: white; }
+.btn-danger { background: #ef4444; color: white; }
+.btn-cart { background: #10b981; color: white; }
+.error-text { color: #ef4444; margin-top: 8px; font-size: 14px; }
+.item-row { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #e2e8f0; }
+.item-content { display: flex; flex-direction: column; gap: 4px; }
+.item-date { font-size: 12px; color: #64748b; }
