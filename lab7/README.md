@@ -8,13 +8,7 @@
 
 ### Архітектура та стек технологій
 
-| Рівень архітектури | Технології | Реалізація в монорепозиторії |
-| :--- | :--- | :--- |
-| **1. Платформи** | Web (Desktop / Mobile браузери), Desktop (Windows / macOS) | Запуск у браузері (`http://localhost:3000`) та як окремого віконного застосунку Electron |
-| **2. Клієнтські технології** | HTML5, CSS3, ES Modules (Import Maps), Electron (`contextBridge`, IPC) | Веб-клієнт у [`packages/web`](./packages/web) та десктопний клієнт у [`packages/desktop`](./packages/desktop) |
-| **3. Спільний код** | JavaScript (ESM), `npm workspaces`, Dependency Injection, `node:test` | Платформонезалежне ядро `@papercraft/core` у [`packages/core`](./packages/core) |
-| **4. Сервер і API** | Node.js (`node:http`), HTTP / REST | Локальний HTTP-сервер роздачі статики із захистом шляхів у [`packages/web/server.js`](./packages/web/server.js) |
-| **5. База даних та сховища** | Web `localStorage`, Node.js `fs/promises`, JSON | [`LocalStorageAdapter`](./packages/web/localStorageAdapter.js) (Web) та [`FileStorageAdapter`](./packages/desktop/fileStorageAdapter.js) (Desktop) |
+![П’ятирівнева архітектурна схема PaperCraft](./drawio.png)
 
 ### Компетентності розробника
 
